@@ -110,16 +110,19 @@
 
   /* Hero visual */
   .hero-visual{position:relative;display:flex;justify-content:center;align-items:center;}
-  .desk-card{
-    position:relative;width:100%;max-width:460px;aspect-ratio:1/0.95;
-    border-radius:28px;overflow:hidden;
-    background:linear-gradient(160deg,#3a1030,#7a1c56 45%,#e6117f);
-    box-shadow:var(--shadow);
-  }
-  .desk-card::before{
-    content:'';position:absolute;inset:0;
-    background:radial-gradient(circle at 70% 20%, rgba(255,255,255,0.18), transparent 55%);
-  }
+  .desk-card {
+  width: 100%;       /* कार्ड की चौड़ाई */
+  max-width: 500px;  /* अधिकतम चौड़ाई अपने हिसाब से सेट करें */
+  overflow: hidden;
+  border-radius: 12px; /* कोनों को हल्का राउंड करने के लिए (Optional) */
+}
+
+.desk-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* इमेज पूरे कार्ड एरिया को बिना शेप बिगड़े कवर कर लेगी */
+  display: block;
+}
   .neon-create{
     position:absolute;top:14%;left:50%;transform:translateX(-50%);
     font-family:'Dancing Script',cursive;font-size:2.6rem;color:#fff;
