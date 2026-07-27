@@ -119,7 +119,7 @@
 
 .desk-card-img {
   width: 100%;
-  height: 100%;
+  height: 200%;
   object-fit: cover; /* इमेज पूरे कार्ड एरिया को बिना शेप बिगड़े कवर कर लेगी */
   display: block;
 }
