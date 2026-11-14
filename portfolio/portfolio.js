@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Open Image or Video in Fullscreen Modal
+  // Open Image or Video in Fullscreen Modal with Sound/Controls
   workCards.forEach(card => {
     card.addEventListener('click', () => {
       const type = card.getAttribute('data-type');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close Modal
   function closeModal() {
     lightbox.classList.remove('open');
-    lightboxContent.innerHTML = ''; // Video ki awaz band karne ke liye
+    lightboxContent.innerHTML = ''; // Stop video audio when closed
   }
 
   closeLightbox.addEventListener('click', closeModal);
