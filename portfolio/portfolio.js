@@ -23,16 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Open Image or Video in Fullscreen Modal with Sound/Controls
+  // Open Image or Video in Fullscreen Modal (nodownload enabled)
   workCards.forEach(card => {
     card.addEventListener('click', () => {
       const type = card.getAttribute('data-type');
       const src = card.getAttribute('data-src');
 
       if (type === 'video') {
-        lightboxContent.innerHTML = `<video src="${src}" controls autoplay></video>`;
+        lightboxContent.innerHTML = `<video src="${src}" controls autoplay controlslist="nodownload" oncontextmenu="return false;"></video>`;
       } else {
-        lightboxContent.innerHTML = `<img src="${src}" alt="Portfolio Work">`;
+        lightboxContent.innerHTML = `<img src="${src}" alt="Portfolio Work" oncontextmenu="return false;">`;
       }
 
       lightbox.classList.add('open');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close Modal
   function closeModal() {
     lightbox.classList.remove('open');
-    lightboxContent.innerHTML = ''; // Stop video audio when closed
+    lightboxContent.innerHTML = ''; // Stop video audio
   }
 
   closeLightbox.addEventListener('click', closeModal);
