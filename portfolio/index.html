@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Works & Portfolio | Creatives by Divya</title>
+  <!-- Designed, developed, and maintained by Pratham Dada (BCA Student, IGNOU) -->
+  <link rel="icon" type="image/png" href="../images/1000247204.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Main CSS aur Portfolio CSS dono link kiye hain -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="../index.html" class="logo">Creatives <small>BY DIVYA</small></a>
+    <nav>
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#about">About Me</a></li>
+        <li><a href="../index.html#services">Services</a></li>
+        <li><a href="../index.html#pricing">Pricing</a></li>
+        <li><a href="index.html" class="active">My Works</a></li>
+      </ul>
+    </nav>
+    <a href="../index.html" class="btn btn-outline">← Back to Home</a>
+  </div>
+</header>
+
+<section class="portfolio-hero">
+  <div class="container">
+    <div class="eyebrow">✦ SHOWCASE OF CREATIVITY</div>
+    <h1>My <span class="accent">Portfolio</span> &amp; Works ♥</h1>
+    <p class="desc">Explore my latest AI-powered posters, video edits, YouTube thumbnails, and reels crafted with passion.</p>
+
+    <!-- Filter Buttons -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Works</button>
+      <button class="filter-btn" data-filter="posters">Posters &amp; Thumbnails</button>
+      <button class="filter-btn" data-filter="videos">Reels &amp; Videos</button>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio-gallery">
+  <div class="container">
+    <div class="works-grid" id="worksGrid">
+
+      <!-- SAMPLE ITEM 1: IMAGE / POSTER -->
+      <div class="work-card" data-category="posters" data-type="image" data-src="../images/1000247203.png">
+        <div class="work-media">
+          <!-- Yahan apni image ka path dein: works/poster1.jpg -->
+          <img src="../images/1000247203.png" alt="AI Poster Design">
+          <div class="work-overlay">
+            <span class="view-badge">🔍 View Full Image</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <span class="work-tag">AI Poster</span>
+          <h4>Creative Studio Poster</h4>
+        </div>
+      </div>
+
+      <!-- SAMPLE ITEM 2: VIDEO / REEL -->
+      <!-- Jab actual video upload karein to data-src="works/video1.mp4" aur <video src="works/video1.mp4"> kar dein -->
+      <div class="work-card" data-category="videos" data-type="video" data-src="works/sample-video.mp4">
+        <div class="work-media video-box">
+          <video src="works/sample-video.mp4" muted loop playsinline poster="../images/1000247204.png"></video>
+          <div class="play-icon">▶</div>
+          <div class="work-overlay">
+            <span class="view-badge">▶ Play Video</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <span class="work-tag">Video Edit / Reel</span>
+          <h4>Instagram Trending Reel Edit</h4>
+        </div>
+      </div>
+
+      <!-- SAMPLE ITEM 3: IMAGE / THUMBNAIL -->
+      <div class="work-card" data-category="posters" data-type="image" data-src="../images/1000247204.png">
+        <div class="work-media">
+          <img src="../images/1000247204.png" alt="Brand Identity">
+          <div class="work-overlay">
+            <span class="view-badge">🔍 View Full Image</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <span class="work-tag">Logo &amp; Branding</span>
+          <h4>Creatives by Divya Brand Logo</h4>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal (Click karne par bada photo/video khulega) -->
+<div class="lightbox" id="lightbox">
+  <span class="close-btn" id="closeLightbox">&times;</span>
+  <div class="lightbox-content" id="lightboxContent"></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="copyright">
+      <span>© 2026 Creative by Divya. All Rights Reserved.</span>
+      <span>Made with Creativity &amp; Passion ♥</span>
+    </div>
+  </div>
+</footer>
+
+<script src="portfolio.js"></script>
+</body>
+</html>
